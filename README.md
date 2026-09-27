@@ -57,9 +57,9 @@ Below is a comparison of leading enterprise and commercial Applicant Tracking Sy
 
 Self-hosted and open-source recruitment systems allow organizations to maintain full control over candidate data, privacy compliance (GDPR/CCPA), and custom hiring workflows 🔐. 
 
-Sorted in descending order by **GitHub Star Count** ⭐:
+Sorted in descending order by **GitHub Stars_Count** ⭐:
 
-| Project Name 📦 | Stack / Tech ⚙️ | Star Count ⭐ | Description 📝 |
+| Project Name 📦 | Stack / Tech ⚙️ | Stars_Count ⭐ | Description 📝 |
 | :--- | :--- | :---: | :--- |
 | **[Huly Platform](https://github.com/hcengineering/platform)** | TypeScript, Rust | [![Stars](https://img.shields.io/github/stars/hcengineering/platform?style=social&color=white)](https://github.com/hcengineering/platform/stargazers) | All-in-one open-source workspace featuring integrated ATS, CRM, issue tracking, and HR management. |
 | **[Resume-Matcher](https://github.com/srbhr/Resume-Matcher)** | Python, Streamlit | [![Stars](https://img.shields.io/github/stars/srbhr/Resume-Matcher?style=social&color=white)](https://github.com/srbhr/Resume-Matcher/stargazers) | Open-source AI harness for parsing resumes, matching job descriptions, and optimizing CV scorecards. |
@@ -83,7 +83,7 @@ Contributions are welcome and greatly appreciated! 🌟 Follow these simple step
 
 1. 🍴 Fork the repository.
 2. 📝 Edit `README.md` keeping the Markdown tabular formatting consistent.
-3. 🔗 Ensure all links are active, descriptions remain objective, and star badges use `style=social&color=white`.
+3. 🔗 Ensure all links are active, descriptions remain objective, and Stars_Badges use `style=social&color=white`.
 4. 🚀 Open a Pull Request with a clear description of the project added.
 
 ---
