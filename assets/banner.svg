@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 48px;
+      fill: #ffffff;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #cbd5e1;
+    }
+    .tag {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #a855f7;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    /* Dynamic background animations */
+    @keyframes pulseParticle {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.4); }
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes floatCardReverse {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(8px); }
+    }
+    @keyframes lineDash {
+      to { stroke-dashoffset: -40; }
+    }
+
+    .p1 { animation: pulseParticle 4s ease-in-out infinite; transform-origin: 150px 80px; }
+    .p2 { animation: pulseParticle 5s ease-in-out infinite 1s; transform-origin: 1050px 220px; }
+    .p3 { animation: pulseParticle 3.5s ease-in-out infinite 0.5s; transform-origin: 900px 70px; }
+    
+    .card-left { animation: floatCard 6s ease-in-out infinite; }
+    .card-right { animation: floatCardReverse 7s ease-in-out infinite; }
+    .flow-line { stroke-dasharray: 8 8; animation: lineDash 2s linear infinite; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern Overlay -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" />
+    </pattern>
+    <rect width="1200" height="300" fill="url(#grid)" />
+  </g>
+
+  <!-- Animated Dynamic Background Elements (Flow lines & decorative shapes behind text) -->
+  <g class="card-left" opacity="0.4">
+    <rect x="60" y="40" width="220" height="120" rx="12" fill="url(#cardGrad)" stroke="#6366f1" stroke-width="1.5" />
+    <circle cx="90" cy="70" r="12" fill="#6366f1" opacity="0.6" />
+    <rect x="115" y="63" width="120" height="14" rx="4" fill="#ffffff" opacity="0.3" />
+    <rect x="90" y="95" width="165" height="10" rx="3" fill="#ffffff" opacity="0.15" />
+    <rect x="90" y="115" width="110" height="10" rx="3" fill="#ffffff" opacity="0.15" />
+  </g>
+
+  <g class="card-right" opacity="0.4">
+    <rect x="920" y="140" width="220" height="120" rx="12" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.5" />
+    <circle cx="950" cy="170" r="12" fill="#a855f7" opacity="0.6" />
+    <rect x="975" y="163" width="120" height="14" rx="4" fill="#ffffff" opacity="0.3" />
+    <rect x="950" y="195" width="165" height="10" rx="3" fill="#ffffff" opacity="0.15" />
+    <rect x="950" y="215" width="110" height="10" rx="3" fill="#ffffff" opacity="0.15" />
+  </g>
+
+  <!-- Flow Lines (Background connection graph) -->
+  <path class="flow-line" d="M 280 100 Q 400 40, 600 50 T 920 180" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.3" />
+
+  <!-- Ambient Glowing Orbs -->
+  <circle class="p1" cx="150" cy="80" r="60" fill="#6366f1" opacity="0.15" filter="url(#glow)" />
+  <circle class="p2" cx="1050" cy="220" r="70" fill="#ec4899" opacity="0.15" filter="url(#glow)" />
+  <circle class="p3" cx="900" cy="70" r="40" fill="#a855f7" opacity="0.2" filter="url(#glow)" />
+
+  <!-- Top Accent Bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accentGrad)" />
+
+  <!-- FOREGROUND CONTENT (Guaranteed high visibility and contrast) -->
+  <g transform="translate(600, 150)" text-anchor="middle">
+    <!-- Tag -->
+    <text y="-55" class="tag">⚡ CURATED RECRUITMENT &amp; ATS ECOSYSTEM ⚡</text>
+    
+    <!-- Main Title -->
+    <text y="5" class="title">Awesome Applicant Tracking</text>
+    
+    <!-- Subtitle -->
+    <text y="48" class="subtitle">Top Commercial SaaS Platforms &amp; Open-Source Hiring Tools</text>
+    
+    <!-- Bottom Accent Pill -->
+    <rect x="-180" y="75" width="360" height="3" rx="1.5" fill="url(#accentGrad)" />
+  </g>
+</svg>
